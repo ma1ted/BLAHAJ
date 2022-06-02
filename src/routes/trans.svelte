@@ -5,13 +5,13 @@
 	const lineCount = 3;
 	const interLineDelay = 100;
 	const lineDuration = 500;
-    const animationDuration = lineCount * interLineDelay + lineDuration;
+	const animationDuration = lineCount * interLineDelay + lineDuration;
 
 	let showFlag = false;
-    let showCover = true;
+	let showCover = true;
 	onMount(() => {
 		showFlag = true;
-        showCover = false;
+		showCover = false;
 		setTimeout(() => {
 			showFlag = false;
 		}, animationDuration);
@@ -19,11 +19,11 @@
 </script>
 
 {#if showCover}
-    <div id="cover"></div>
+	<div id="cover" />
 {/if}
 
 {#if showFlag}
-	<section class="container" out:fade={{duration: animationDuration}}>
+	<section class="container" out:fade={{ duration: animationDuration }}>
 		{#each Array(lineCount) as _, index}
 			<div
 				in:fly={{
@@ -42,25 +42,25 @@
 {/if}
 
 <style>
-    #cover {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--blue);
-    }
-	.container {
-        position: fixed;
-        top: 0;
-        left: 0;
+	#cover {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 		height: 100%;
-        width: 100%;
+		background-color: var(--blue);
+	}
+	.container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-        background-color: var(--blue);
-        z-index: 3;
+		background-color: var(--blue);
+		z-index: 3;
 	}
 	.container > div {
 		height: 20%;

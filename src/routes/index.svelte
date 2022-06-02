@@ -13,25 +13,39 @@
 </script>
 
 <svelte:head>
-    <!-- Primary Meta Tags -->
-    <title>BLÅHAJ</title>
-    <meta name="title" content="BLÅHAJ">
-    <meta name="description" content="Alla älskar den här lilla blåhajen. Det ger de bästa kramarna. Det spelar ingen roll om du gråter in i det. Det är det bästa.">
+	<!-- Primary Meta Tags -->
+	<title>BLÅHAJ</title>
+	<meta name="title" content="BLÅHAJ" />
+	<meta
+		name="description"
+		content="Alla älskar den här lilla blåhajen. Det ger de bästa kramarna. Det spelar ingen roll om du gråter in i det. Det är det bästa."
+	/>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://blahaj.malted.dev/">
-    <meta property="og:title" content="BLÅHAJ">
-    <meta property="og:description" content="Alla älskar den här lilla blåhajen. Det ger de bästa kramarna. Det spelar ingen roll om du gråter in i det. Det är det bästa.">
-    <meta property="og:image" content="https://blahaj.malted.dev/blahaj/blahaj-0.png">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://blahaj.malted.dev/" />
+	<meta property="og:title" content="BLÅHAJ" />
+	<meta
+		property="og:description"
+		content="Alla älskar den här lilla blåhajen. Det ger de bästa kramarna. Det spelar ingen roll om du gråter in i det. Det är det bästa."
+	/>
+	<meta
+		property="og:image"
+		content="https://blahaj.malted.dev/blahaj/blahaj-0.png"
+	/>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://blahaj.malted.dev/">
-    <meta property="twitter:title" content="BLÅHAJ">
-    <meta property="twitter:description" content="Alla älskar den här lilla blåhajen. Det ger de bästa kramarna. Det spelar ingen roll om du gråter in i det. Det är det bästa.">
-    <meta property="twitter:image" content="https://blahaj.malted.dev/blahaj/blahaj-0.png">
-
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://blahaj.malted.dev/" />
+	<meta property="twitter:title" content="BLÅHAJ" />
+	<meta
+		property="twitter:description"
+		content="Alla älskar den här lilla blåhajen. Det ger de bästa kramarna. Det spelar ingen roll om du gråter in i det. Det är det bästa."
+	/>
+	<meta
+		property="twitter:image"
+		content="https://blahaj.malted.dev/blahaj/blahaj-0.png"
+	/>
 </svelte:head>
 
 <!-- {#if intro}
@@ -66,12 +80,12 @@
 		color: white;
 		margin: 0;
 
-        --blue: #5bcefa;
-        --pink: #f5a9b8
+		--blue: #5bcefa;
+		--pink: #f5a9b8;
 	}
-    :global(*)::selection {
-        background: var(--pink);
-    }
+	:global(*)::selection {
+		background: var(--pink);
+	}
 	:global(html, body) {
 		margin: 0;
 		width: 100%;
