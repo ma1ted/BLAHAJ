@@ -1,11 +1,33 @@
-<section class="container">
-	{#each Array(15) as _, index}
-		<div class="panel">
-			<!-- svelte-ignore a11y-missing-attribute -->
-			<img class="blahaj" src="/blahaj/blahaj-{index}.png" alt="BLÅHAJ" loading="lazy"/>
-		</div>
-	{/each}
-</section>
+<script>
+    import { onMount } from "svelte";
+    
+    const imageCount = 15;
+    let container;
+    let imageIndex = 0;
+
+    function loadImage(index) {
+        if (index > imageCount) return;
+
+        const panel = document.createElement("div");
+        panel.className = "panel";
+        
+        const img = document.createElement("img");
+        img.src = `/blahaj/blahaj-${index}.png`;
+        img.alt = "BLÅHAJ";
+        img.className = "blahaj";
+        img.style.width = "100%";
+
+        panel.appendChild(img);
+        container.appendChild(panel)
+        
+        imageIndex++;
+        img.onload = () => loadImage(imageIndex);
+    }
+    
+    onMount(() => loadImage(imageIndex));
+</script>
+
+<section class="container" bind:this={container}></section>
 
 <style>
 	.container {
