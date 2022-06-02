@@ -61,6 +61,9 @@
 		color: white;
 		margin: 0;
 	}
+    :global(*)::selection {
+        background: #f5a9b8;
+    }
 	:global(html, body) {
 		margin: 0;
 		width: 100%;
