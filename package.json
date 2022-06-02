@@ -1,6 +1,6 @@
 {
-	"name": "blahaj",
-	"version": "1.2.1",
+	"name": "BLÅHAJ",
+	"version": "1.2.2",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"host": "svelte-kit dev --host",
