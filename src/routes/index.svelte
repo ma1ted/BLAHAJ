@@ -31,7 +31,7 @@
 	/>
 	<meta
 		property="og:image"
-		content="https://blahaj.malted.dev/blahaj/blahaj-0.png"
+		content="https://blahaj.malted.dev/blahaj/blahaj-0.jpg"
 	/>
 
 	<!-- Twitter -->
@@ -44,7 +44,7 @@
 	/>
 	<meta
 		property="twitter:image"
-		content="https://blahaj.malted.dev/blahaj/blahaj-0.png"
+		content="https://blahaj.malted.dev/blahaj/blahaj-0.jpg"
 	/>
 </svelte:head>
 
