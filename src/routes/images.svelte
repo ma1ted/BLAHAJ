@@ -1,7 +1,9 @@
 <section class="container">
 	{#each Array(15) as _, index}
 		<div class="panel">
-			<img class="blahaj" src="/blahaj/blahaj-{index}.png" alt="BLÅHAJ" />
+			<!-- svelte-ignore a11y-missing-attribute -->
+			<img class="blahaj" src="/blahaj/blahaj-{index}.png" loading=lazy />
+            <!-- alt="BLÅHAJ" -->
 		</div>
 	{/each}
 </section>
