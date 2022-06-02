@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import { onMount } from "svelte";
     
     const imageCount = 14;
@@ -27,7 +27,17 @@
     onMount(() => loadImage(imageIndex));
 </script>
 
-<section class="container" bind:this={container}></section>
+<section class="container" bind:this={container}>
+
+</section> -->
+
+<section class="container">
+	{#each Array(15) as _, index}
+		<div class="panel">
+			<img class="blahaj" src="/blahaj/blahaj-{index}.jpg" loading="lazy" alt="BLÅHAJ"/>
+		</div>
+	{/each}
+</section>
 
 <style>
 	.container {

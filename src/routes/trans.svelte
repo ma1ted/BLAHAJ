@@ -1,27 +1,29 @@
 <script>
-	import { fly } from "svelte/transition";
+	import { fly, fade } from "svelte/transition";
 	import { onMount } from "svelte";
-
-	export let showContent = () => {};
 
 	const lineCount = 3;
 	const interLineDelay = 100;
 	const lineDuration = 500;
+    const animationDuration = lineCount * interLineDelay + lineDuration;
 
-	let show = false;
+	let showFlag = false;
+    let showCover = true;
 	onMount(() => {
-		show = true;
+		showFlag = true;
+        showCover = false;
 		setTimeout(() => {
-			show = false;
-			setTimeout(() => {
-				showContent();
-			}, lineCount * interLineDelay + lineDuration);
-		}, lineCount * interLineDelay + lineDuration);
+			showFlag = false;
+		}, animationDuration);
 	});
 </script>
 
-{#if show}
-	<section class="container">
+{#if showCover}
+    <div id="cover"></div>
+{/if}
+
+{#if showFlag}
+	<section class="container" out:fade={{duration: animationDuration}}>
 		{#each Array(lineCount) as _, index}
 			<div
 				in:fly={{
@@ -40,18 +42,32 @@
 {/if}
 
 <style>
+    #cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--blue);
+    }
 	.container {
+        position: fixed;
+        top: 0;
+        left: 0;
 		height: 100%;
+        width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+        background-color: var(--blue);
+        z-index: 3;
 	}
 	.container > div {
 		height: 20%;
 	}
 	.container > div:nth-of-type(1),
 	.container > div:nth-of-type(3) {
-		background-color: #f5a9b8;
+		background-color: var(--pink);
 	}
 	.container > div:nth-of-type(2) {
 		background-color: white;

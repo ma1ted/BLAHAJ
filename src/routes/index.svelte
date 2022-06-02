@@ -6,10 +6,10 @@
 	import Images from "./images.svelte";
 	import Footer from "./footer.svelte";
 
-	let intro = true;
-	let content = false;
+	// let intro = true;
+	// let content = false;
 
-	const showContent = () => (content = true);
+	// const showContent = () => (content = true);
 </script>
 
 <svelte:head>
@@ -34,16 +34,21 @@
 
 </svelte:head>
 
-{#if intro}
+<!-- {#if intro}
 	<Trans {showContent} />
-{/if}
-{#if content}
+{/if} -->
+<!-- {#if content}
 	<section in:fade>
 		<Title />
 		<Images />
 		<Footer />
 	</section>
-{/if}
+{/if} -->
+
+<Trans />
+<Title />
+<Images />
+<Footer />
 
 <style>
 	@font-face {
@@ -60,14 +65,17 @@
 		font-family: "IKEA Noto", sans-serif;
 		color: white;
 		margin: 0;
+
+        --blue: #5bcefa;
+        --pink: #f5a9b8
 	}
     :global(*)::selection {
-        background: #f5a9b8;
+        background: var(--pink);
     }
 	:global(html, body) {
 		margin: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #5bcefa;
+		background-color: var(--blue);
 	}
 </style>
