@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     
-    const imageCount = 15;
+    const imageCount = 14;
     let container;
     let imageIndex = 0;
 
