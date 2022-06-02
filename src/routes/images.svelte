@@ -12,7 +12,7 @@
         panel.className = "panel";
         
         const img = document.createElement("img");
-        img.src = `/blahaj/blahaj-${index}.png`;
+        img.src = `/blahaj/blahaj-${index}.jpg`;
         img.alt = "BLÅHAJ";
         img.className = "blahaj";
         img.style.width = "100%";
